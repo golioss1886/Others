@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb}
+\usepackage[small]{titlesec}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\title{Information and Entropy}
+\begin{document}
+	%\setcion{Plausible introduction}
+	Information content, self-information, surprisal, or Shannon information is a quantity derived from probability of a particular event occurring from a random variable. The Shannon information can be interpreted as quantifying the level of "surprise" of a particular outcome. Just like if we see sun rises from east, we don't surprise anymore. We don't have some new information. It's always to do that. However, If we find sun rises from west some day, it would have huge information for individuals. And we would confuse and surprise sun what's going on? \\ \\
+	Claude Shannon gives several axioms:
+
+	According to above axioms, we have definition:
+	\[
+		I_{X}(x) = -log[p_{X}(x)] = log\left (  \frac{1}{p_{X}(x)} \right ) 
+	.\] 
+	A random variable $X$ with probability mass function $p_{X}(x)$,the self-information of measuring $X$ as outcome $x$. The base of log is depending on what field. \\ \\
+	Shannon entropy
+	\begin{align*}
+		H(X) & = \sum_{x}p_{X}(x)I_{X}(x) \\
+			 & = -\sum_{x}p_{X}(x)log[p_{X}(x)].
+	\end{align*}
+	Entropy like expected value. It can measure the average of surprise, uncertainty and mess extent of information. For instance, in League of Legends 2021 championship, NA team C9 crushs China team FPX. It may have large infomation  $I_{X}(x)$ but probablity is small.(multiply them is big enough) And in second stage both EU teams and NA teams beat China that never happened in LOL championship that would dedicate lots for entropy. It can get a big entropy.\\
+	In conclusion, if a competition expected teams perform well so result is like people think, we get a small entropy. However, if  a competition expected teams perform like shit so result isn't like people think, we would get a big entropy.
+
+\end{document}
