@@ -1,0 +1,19 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb}
+\usepackage[small]{titlesec}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\title{KNN}
+\begin{document}
+KNN(K Nearest Neighbor), simply, given a point, want to know what type is it. We define this point is the type of nearest points. "Nearest" in the simplest way use Euclidean distance.\\
+That is
+\[
+	D = \sqrt{\sum_{i=1}^{n}(x_{i}-y_{i})^{2}}
+.\] 
+Other definition like Manhattan distance(name because of Manhattan map list)
+\[
+	D = \sum_{i}|a_{i} - b_{i}|
+.\] 
+\end{document}
