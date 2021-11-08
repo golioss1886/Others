@@ -1,3 +1,3 @@
-- Purple input is $S_{in}/C_{in}$
+- Purple input is $<img src="https://render.githubusercontent.com/render/math?math=S_{in}">$
 - test
 - test2
