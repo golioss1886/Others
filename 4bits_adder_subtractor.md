@@ -1,0 +1,3 @@
+- Purple input is $S_{in}/C_{in}$
+- test
+- test2
