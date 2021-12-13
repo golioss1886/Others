@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb}
+\usepackage[small]{titlesec}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\title{Bayes' theorem}
+\begin{document}
+The probability of an event, based on prior knowledge of conditions that might be related to the event.
+\begin{definition}(Conditional Probability)
+	\[
+		P(A|B) = \frac{P(A\cap B)}{P(B)}, where P(B) > 0.
+	\]
+\end{definition}
+\begin{definition}(Bayes's Theorem)
+	\[
+		P(A|B) = \frac{P(A)P(B|A)}{P(B)}, where P(B) > 0.
+	\]
+\end{definition}
+\begin{proof}
+	\begin{align*}
+		P(A|B) &= \frac{P(A\cap B)}{P(B)} \\
+		P(B|A) &= \frac{P(A\cap B)}{P(A)} \\
+		P(A|B)P(B) &= P(A\cap B) = P(B|A)P(A) \\
+		P(A|B) &= \frac{P(B|A)P(A)}{P(B)}
+	\end{align*}
+\end{proof}
+
+\end{document}
