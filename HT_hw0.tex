@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb}
+\usepackage[small]{titlesec}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\title{HT Homework 0}
+\date{}
+\begin{document}
+\maketitle
+\section*{1 Probability and Statistics}
+\begin{enumerate}
+% (1) (combinatorics) \\
+\item (combinatorics) \\
+Let  $C(N, K)=1$  for  $K=0$  or  $K=N$ , and  $C(N, K)=C(N-1, K)+C(N-1, K-1)$  $for  N \geq 1.$
+Prove that $C(N, K)=\frac{N !}{K !(N-K) !}$  for  $N \geq 1$  and  $0 \leq K \leq N.$
+\item (counting) \\
+What is the probability of getting exactly 4 heads when flipping 10 fair coins?\\\\
+What is the probability of getting a full house (XXXYY) when randomly drawing 5 cards out of a deck of 52 cards?
+\item (conditional probability) \\
+If your friend flipped a fair coin three times, and tell you that one of the tosses resulted in head, what
+is the probability that all three tosses resulted in heads?
+\item (Bayes theorem) \\
+A program selects a random integer  X  like this: a random bit is first generated uniformly.
+ If the bit is  0, X  is drawn uniformly from  $\{0,1, \ldots, 7\}$ ; otherwise,  X  is drawn uniformly from  $\{0,-1,-2,-3\}$ . If we get an  X  from the program with  $|X|=1$ , what is the probability that  X  is negative?
+\item (union/intersection) \\
+If  $P(A)=0.3$  and  $P(B)=0.4$,\\
+what is the maximum possible value of  $P(A \cap B)$?\\
+what is the minimum possible value of  $P(A \cap B)$?\\
+what is the maximum possible value of  $P(A \cup B)$?\\
+what is the minimum possible value of  $P(A \cup B)$?
+\item (mean/variance) \\
+Let mean  $\bar{X}=\frac{1}{N} \sum_{n=1}^{N} X_{n}$  and variance $\sigma_{X}^{2}=\frac{1}{N-1} \sum_{n=1}^{N}\left(X_{n}-\bar{X}\right)^{2}$.\\
+Prove that\\
+$$
+\sigma_{X}^{2}=\frac{N}{N-1}\left(\frac{1}{N} \sum_{n=1}^{N} X_{n}^{2}-\bar{X}^{2}\right).
+$$
+\item (Gaussian distribution) \\
+If  $X_{1}$  and  $X_{2}$  are independent random variables, where  $p\left(X_{1}\right)$  is Gaussian with mean 2 and variance 1 ,  $p\left(X_{2}\right)$  is Gaussian with mean -3 and variance 4. Let  $Z=X_{1}+X_{2}$ . Prove  $p(Z)$  is Gaussian, and determine its mean and variance.
+\end{enumerate}
+\section*{2 Linear Algebra}
+\begin{enumerate}
+    \item (rank)
+    What is the rank of 
+    $
+    \begin{pmatrix}
+        1 & 2 & 1\\
+        1 & 0 & 3\\
+        1 & 1 & 2
+      \end{pmatrix}
+    $?
+    \item (inverse)
+    What is the inverse of 
+    $
+    \begin{pmatrix}
+        0 & 2 & 4\\
+        2 & 4 & 2\\
+        3 & 3 & 1
+      \end{pmatrix}
+    $?
+    \item (eigenvalues/eigenvectors)
+    What are the eigenvalues and eigenvectors of
+    $
+    \begin{pmatrix}
+        3 & 1 & 1\\
+        2 & 4 & 2\\
+        -1 & -1 & 1
+      \end{pmatrix}
+    $?
+    \item (singular value decomposition)
+\end{enumerate}
+\end{document}
