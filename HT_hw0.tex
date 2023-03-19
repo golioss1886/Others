@@ -70,9 +70,83 @@ If  $X_{1}$  and  $X_{2}$  are independent random variables, where  $p\left(X_{1
       \end{pmatrix}
     $?
     \item (singular value decomposition)
+      \begin{enumerate}
+        \item For a real matrix  M , let  $M=U \Sigma V^{T}$ be its singular value decomposition.
+         Define  $\mathrm{M}^{\dagger}=\mathrm{V}^{\dagger} \mathrm{U}^{T}$ , where  $\Sigma^{\dagger}[i][j]=\frac{1}{\Sigma[i][j]}$  when  $\Sigma[i][j]$  is nonzero, and 0 otherwise. 
+         Prove that  $\mathrm{MM}^{\dagger} \mathrm{M}=\mathrm{M} .$
+         \item If  $\mathrm{M}$  is invertible, prove that $\mathrm{M}^{\dagger}=\mathrm{M}^{-1}.$
+      \end{enumerate}
     \item (PD/PSD)
+    A symmetric real matrix  $\mathrm{A}$  is positive definite (PD) $iff  \mathbf{x}^{T} \mathrm{Ax}>0$  for all  $\mathbf{x} \neq \mathbf{0}$,
+     and positive semidefinite (PSD) if $">"$ is changed to " $\geq$" . Prove:
+     \begin{enumerate}
+       \item For any real matrix  $\mathrm{Z}, \mathrm{ZZ}^{T}$  is PSD.
+       \item A symmetric  $\mathrm{A}$  is  $\mathrm{PD}$  iff all eigenvalues of  $\mathrm{A}$  are strictly positive.
+     \end{enumerate}
     \item (inner product)
+    Consider  $\mathbf{x} \in R^{d}$  and some  $\mathbf{u} \in R^{d}$  with  $\|\mathbf{u}\|=1 .$\\
+    What is the maximum value of  $\mathbf{u}^{T} \mathbf{x}$  ? What  $\mathbf{u}$  results in the maximum value?\\
+    What is the minimum value of  $\mathbf{u}^{T} \mathbf{x}$  ? What  $\mathbf{u}$  results in the minimum value?\\
+    What is the minimum value of  $\left|\mathbf{u}^{T} \mathbf{x}\right|$ ? What  $\mathbf{u}$  results in the minimum value?
     \item (distance)
+    Consider two parallel hyperplanes in  $R^{d}$  :
+    \[
+    \begin{array}{l}
+       H_{1}: \mathbf{w}^{T} \mathbf{x}=+3, \\
+       H_{2}: \mathbf{w}^{T} \mathbf{x}=-2,
+    \end{array}
+    .\] 
+    where  $\mathbf{w}$  is the norm vector. What is the distance between  $H_{1}$  and  $H_{2}$  ?
 \end{enumerate}
+
 \section*{3 Calculus}
+\begin{enumerate}
+  \item (differential and partial differential)\\
+    Let  $f(x)=\ln \left(1+e^{-2 x}\right)$. What is  $\frac{d f(x)}{d x}$? 
+    Let  $g(x, y)=e^{x}+e^{2 y}+e^{3 x y^{2}}$. What is  $\frac{\partial g(x, y)}{\partial y}$  ?
+  \item (chain rule)\\
+    Let  $f(x, y)=x y, x(u, v)=\cos (u+v), y(u, v)=\sin (u-v).$ 
+    What is  $\frac{\partial f}{\partial v}?$
+  \item (integral)
+    What is  $\int_{5}^{10} \frac{2}{x-3} dx?$
+  \item (gradient and Hessian)\\
+    Let  $E(u, v)=\left(u e^{v}-2 v e^{-u}\right)^{2}.$
+    Calculate the gradient  $\nabla E$  and the Hessian  $\nabla^{2} E$  at  $u=1$  and  $v=1.$
+  \item (Taylor’s expansion)\\
+    Let  $E(u, v)=\left(u e^{v}-2 v e^{-u}\right)^{2}.$
+    Write down the second-order Taylor's expansion of  E  around $u=1$  and  $v=1 .$
+  \item (optimization)\\
+    For some given  $A>0, B>0$, solve
+    \[
+      \min _{\alpha} A e^{\alpha}+B e^{-2 \alpha}
+    .\] 
+  \item (vector calculus)\\
+    Let $\mathbf{w}$ be a vector in $R^d$ and
+     $E(\mathbf{w}) = \frac{1}{2}\mathbf{w}^T A\mathbf{w} + \mathbf{b}^T\mathbf{w}$
+     for some symmetric matrix A and vector $\mathbf{b}.$
+    Prove that the gradient $\nabla  E(w) = A\mathbf{w} + b$ and the Hessian $\nabla 2E(\mathbf{w}) = A.$
+  \item (quadratic programming)\\
+    Following the previous question, if A is not only symmetric but also positive definite (PD),
+    prove that
+    the solution of $\text{argmin}_{\mathbf{w}}E(\mathbf{w})$ is $-A^{-1}\mathbf{b}.$
+  \item (optimization with linear constraint)\\
+    Consider
+    \[
+      \text{min}_{w_1,w_2,w_3}\frac{1}{2}(w^2_1+2w^2_2+3w^2_3)\text{  subject to  }
+      w_1 + w_2 + w_3 = 11
+    .\] 
+    Refresh your memory on “Lagrange multipliers” and show that the optimal solution must happen on
+$w_1 = \lambda,2w_2 = \lambda, 3w_3 = \lambda $ Use the property to solve the problem.
+  \item (optimization with linear constraints)\\
+  Let $\mathbf{w}$be a vector in $R^d$ and $E(\mathbf{w})$ be a convex differentiable function of $\mathbf{w}$.
+   Prove that the optimal solution to
+   \[
+   \text{min}_{w}E(\mathbf{w}) \text{subject to} A\mathbf{w}+b = 0
+   .\] 
+   must happen at $\nabla E(\mathbf{w})+\lambda^T A = 0 $ for some vector $\lambda$.
+   (Hint: If not, let u be the residual when
+    projecting $\nabla E(\mathbf{w})$ to the span of the rows of A.
+    Show that for some very small  $\eta, w - \eta · u $ is a feasible
+    solution that improves E.)
+\end{enumerate}
 \end{document}
